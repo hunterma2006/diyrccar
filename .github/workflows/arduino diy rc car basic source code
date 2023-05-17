@@ -1,0 +1,89 @@
+int ENA1 = 6;
+int motor1 = 5;
+int motor2 = 4;
+int motor3 = 3;
+int motor4 = 2;
+int ENB1 = 1;
+int EENA1 = 13;
+int mmotor1 = 12;
+int mmotor2 = 11;
+int mmotor3 = 10;
+int mmotor4 = 9;
+int EENB1 = 8;
+
+
+void setup() {
+  pinMode(ENA1, OUTPUT);
+  pinMode(motor1, OUTPUT);
+  pinMode(motor2, OUTPUT);
+  pinMode(motor3, OUTPUT);
+  pinMode(motor4, OUTPUT);
+  pinMode(ENB1, OUTPUT);
+  pinMode(EENA1, OUTPUT);
+  pinMode(mmotor1, OUTPUT);
+  pinMode(mmotor2, OUTPUT);
+  pinMode(mmotor3, OUTPUT);
+  pinMode(mmotor4, OUTPUT);
+  pinMode(EENB1, OUTPUT);
+  
+
+}
+
+void loop() {
+  forward();
+  delay(2000);
+  right();
+  delay(2000);
+  left();
+  delay(2000);
+  forward();
+  delay(2000);
+  backward();
+  delay(2000);
+
+}
+
+void forward(){
+  digitalWrite(motor1, HIGH);
+  digitalWrite(motor2, LOW);
+  digitalWrite(motor3, HIGH);
+  digitalWrite(motor4, LOW);
+  digitalWrite(mmotor1, HIGH);
+  digitalWrite(mmotor2, LOW);
+  digitalWrite(mmotor3, HIGH);
+  digitalWrite(mmotor4, LOW);
+  delay(100);
+}
+void backward(){
+  digitalWrite(motor1, LOW);
+  digitalWrite(motor2, HIGH);
+  digitalWrite(motor3, LOW);
+  digitalWrite(motor4, HIGH);
+  digitalWrite(mmotor1, LOW);
+  digitalWrite(mmotor2, HIGH);
+  digitalWrite(mmotor3, LOW);
+  digitalWrite(mmotor4, HIGH);
+  delay(100);
+}
+void right(){
+  digitalWrite(motor1, HIGH);
+  digitalWrite(motor2, LOW);
+  digitalWrite(motor3, LOW);
+  digitalWrite(motor4, HIGH);
+  digitalWrite(mmotor1, HIGH);
+  digitalWrite(mmotor2, LOW);
+  digitalWrite(mmotor3, LOW);
+  digitalWrite(mmotor4, HIGH);
+  delay(100);
+}
+void left(){
+  digitalWrite(motor1, LOW);
+  digitalWrite(motor2, HIGH);
+  digitalWrite(motor3, HIGH);
+  digitalWrite(motor4, LOW);
+  digitalWrite(mmotor1, LOW);
+  digitalWrite(mmotor2, HIGH);
+  digitalWrite(mmotor3, HIGH);
+  digitalWrite(mmotor4, LOW);
+  delay(100);
+}
